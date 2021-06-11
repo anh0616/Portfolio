@@ -1,0 +1,144 @@
+@media (max-width: 800px) {
+    #header-home {
+        height: 30rem;
+
+        .header-content {
+            padding-top: 5rem;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .chosenFade {
+        opacity: 100%;
+    }
+
+    // Header
+    #main-nav {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            padding: 1rem;
+        }
+    }
+
+    #header {
+        &-home {
+            height: 10rem;
+            border-bottom: 3px solid $main-color;
+
+            background-position: center 0;
+
+            .header-content {
+                display: none;
+            }
+        }
+
+        &-inner {
+            height: 10rem;
+        }
+    }
+
+    // Stack Grid
+    #home-a .specials,
+    #home-b .stats,
+    #home-c .process,
+    #about-d .fun-facts,
+    #contact-a .specials,
+    #contact-b .moreBtn,
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    // Home
+    #home {
+        &-a {
+            .specials div {
+                border-bottom: 1px solid $light-color;
+
+                padding-bottom: 1rem;
+
+                &:last-child {
+                    border: none;
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        &-b {
+            .stats div {
+                padding: 2rem 0 1rem 0;
+            }
+        }
+    }
+
+    // About
+    #about {
+        &-a {
+            .about-info {
+                grid-template-areas:
+                    "bioimage"
+                    "bio"
+                    "ln1"
+                    "ln2"
+                    "ln3";
+            }
+        }
+    }
+
+    #about-c {
+        .about-logos {
+            grid-template-columns: repeat(3, 1fr);
+
+            a {
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    #about-d {
+        .fun-facts p {
+            min-height: 0;
+            margin-top: 1.5rem;
+        }
+    }
+
+    // Footer
+    #main-footer {
+        height: 7rem;
+
+        .footer-content {
+            flex-direction: column;
+            padding: 1rem;
+            height: 5rem;
+        }
+    }
+}
+
+// Landscape
+@media (max-height: 580px) {
+    .chosenFade {
+        opacity: 100%;
+    }
+
+    #header-home {
+        .header-content {
+            padding-top: 3rem;
+        }
+    }
+}
+
+@media (max-height: 330px) {
+    .chosenFade {
+        opacity: 100%;
+    }
+
+    #header-home {
+        .header-content {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
