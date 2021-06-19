@@ -1,0 +1,41 @@
+// Variables
+$website-width: 1280px;
+
+$main-color: #ffcd62;
+$light-color: #f4f4f4;
+$medium-color: #dddddd;
+$dark-color: #101010;
+$header-color: #1d2b36;
+
+$bg-img: url("../img/showcase.webp");
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return $dark-color;
+    } @else {
+        @return #ffffff;
+    }
+}
+
+// Animation
+@keyframes moving {
+    0% {
+        opacity: 100%;
+        transform: translate(-100%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadding {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
